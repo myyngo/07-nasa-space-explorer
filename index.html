@@ -14,20 +14,38 @@
     </header>
 
     <div class="filters">
-      <input type="date" id="startDate" />
-      <input type="date" id="endDate" />
-      <button>Get Space Images</button>
+        <input type="date" id="start-date" />
+        <input type="date" id="end-date" />
+        <button id="fetch-btn">Get Space Images</button>
     </div>
 
-    <div id="gallery" class="gallery">
-      <div class="placeholder">
-        <div class="placeholder-icon">🔭</div>
-        <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
+      <!-- Space Fact Section -->
+      <section class="fact-section">
+        <p class="fact-label">🌌 Did You Know?</p>
+        <p id="space-fact"></p>
+      </section>
+
+      <div id="gallery" class="gallery">
+        <div class="placeholder">
+          <div class="placeholder-icon">🔭</div>
+          <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
+        </div>
       </div>
-    </div>
   </div>
 
   <script src="js/dateRange.js"></script>
   <script src="js/script.js"></script>
+
+    <!-- Modal Section -->
+    <div id="modal" class="modal-overlay">
+      <div class="modal-content">
+        <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+        <img id="modal-img" src="" alt="" />
+        <div id="modal-video" style="display:none;"></div>
+        <h2 id="modal-title"></h2>
+        <p id="modal-date" class="modal-date"></p>
+        <p id="modal-explanation"></p>
+      </div>
+    </div>
 </body>
 </html>
